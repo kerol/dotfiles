@@ -17,3 +17,7 @@ cp gitconfig ~/.gitconfig
 rm  -rf ~/.pip
 mkdir ~/.pip
 cp pip.conf ~/.pip
+
+# dircolors
+rm -f ~/.dircolors
+cp dircolors ~/.dircolors
