@@ -1,0 +1,17 @@
+[user]
+    email = your@email.com
+    name = yourname
+[alias]
+    st = status
+    ci = commit
+    pl = pull
+    ph = push
+    df = diff
+    br = branch
+    co = checkout
+[push]
+    default = tracking
+[core]
+    editor = vim
+[color]
+    ui = True

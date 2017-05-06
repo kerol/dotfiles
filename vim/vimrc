@@ -1,0 +1,63 @@
+source ~/.vim/bundles.vim
+
+" commen
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set fileformats=unix,dos,mac
+syntax on
+colorscheme luna
+
+" search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" editor settings
+set history=1000
+set nocompatible
+set backspace=indent,eol,start
+"set backspace=2
+set scrolloff=5                               " 5 lines above/below cursor when scrolling
+set number                                    " show line numbers
+set showmatch                                 " show matching bracket (briefly jump)
+set showcmd                                   " show typed command in status bar
+set cmdheight=2
+set title                                     " show file in titlebar
+set laststatus=2                              " use 2 lines for the status bar
+set matchtime=2                               " show matching bracket for 0.2 seconds
+set matchpairs+=<:>                           " specially for html
+
+" indent
+set autoindent
+set smartindent     " indent when
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+" autocmd
+autocmd FileType php setlocal ts=2 sw=2 sts=2 tw=120
+autocmd FileType ruby setlocal ts=2 sw=2 sts=2 tw=120
+autocmd FileType coffee,javascript setlocal ts=2 sw=2 sts=2 tw=120
+autocmd FileType python setlocal ts=4 sw=4 sts=4 tw=120 colorcolumn=79
+autocmd FileType html,htmldjango,xhtml,haml setlocal ts=2 sw=2 sts=2 tw=0
+autocmd FileType sass,scss,css setlocal ts=2 sw=2 sts=2 tw=120
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" nnoremap
+set splitbelow
+set splitright
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" syntax support
+autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
+" js
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
